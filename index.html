@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Atlas of Interesting Things</title>
+    <style>
+      :root {
+        --bg: #f4ede3;
+        --panel: rgba(255, 250, 244, 0.78);
+        --border: rgba(92, 70, 54, 0.16);
+        --text: #2d2118;
+        --muted: #7b6758;
+        --accent: #b86f52;
+        --accent-soft: #ead2c5;
+        --shadow: 0 18px 50px rgba(75, 53, 40, 0.10);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, #fffaf4 0%, transparent 32%),
+          radial-gradient(circle at bottom right, #efe2d3 0%, transparent 28%),
+          linear-gradient(180deg, #f7f0e7 0%, #efe5d8 100%);
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 4rem 1.5rem 2rem;
+      }
+
+      .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 5.5rem);
+        line-height: 0.95;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .subtitle {
+        max-width: 680px;
+        margin: 1.25rem 0 0;
+        font-size: 1.08rem;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .gallery-grid {
+        width: min(1100px, calc(100% - 3rem));
+        margin: 1rem auto 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 60px rgba(75, 53, 40, 0.14);
+        border-color: rgba(184, 111, 82, 0.28);
+      }
+
+      .card-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.9rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #7a4735;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card-number {
+        margin: 0 0 0.45rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .card-title {
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1.05;
+        font-weight: 600;
+      }
+
+      .card-copy {
+        margin: 0.9rem 0 1.3rem;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .chip {
+        padding: 0.38rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        font-size: 0.82rem;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.45);
+      }
+
+      .card-link {
+        margin-top: 1.3rem;
+        font-size: 0.92rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      footer {
+        margin-top: auto;
+        padding: 0 1.5rem 2rem;
+      }
+
+      .footer-inner {
+        width: min(1100px, calc(100% - 0rem));
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Atlas of Interesting Things</p>
+          <h1>A small museum of computational curiosities.</h1>
+          <p class="subtitle">
+            A growing collection of interactive experiments in graphics,
+            sound, algorithms, vision, and other things that are too
+            interesting to leave alone.
+          </p>
+        </div>
+      </section>
+
+      <main class="gallery-grid">
+        <a class="card" href="/geometry.html">
+          <div class="card-status">Live exhibit</div>
+          <p class="card-number">Gallery 01</p>
+          <h2 class="card-title">Geometry Lab</h2>
+          <p class="card-copy">
+            Explore 3D forms, parametric surfaces, materials, lighting,
+            and procedural deformation in a polished little graphics
+            playground.
+          </p>
+          <div class="card-meta">
+            <span class="chip">Three.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">3D Graphics</span>
+          </div>
+          <div class="card-link">Enter exhibit →</div>
+        </a>
+
+        <a class="card" href="/sound.html">
+          <div class="card-status">Coming soon</div>
+          <p class="card-number">Gallery 02</p>
+          <h2 class="card-title">Sound Lab</h2>
+          <p class="card-copy">
+            A future space for synthesis, waveforms, musical structure,
+            and computational experiments in sound and music.
+          </p>
+          <div class="card-meta">
+            <span class="chip">Web Audio</span>
+            <span class="chip">DSP</span>
+            <span class="chip">Interactive Audio</span>
+          </div>
+          <div class="card-link">Preview exhibit →</div>
+        </a>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          Atlas is being built one small experiment at a time.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
