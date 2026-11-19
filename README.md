@@ -20,12 +20,20 @@ npm run build
 ## Current Exhibits:
 
 - The Geometry Lab: Try to create some weird objects by twisting / wobbling the original object. 
-- The Sound Lab (coming): I'm not sure why did I want to create a visual version of strudel, now I'm suffering. 
+- The Sound Lab (coming): I'm not sure why did I want to create a visual version of strudel, now I'm suffering.
+
+### Potential Exhibits: 
+
+Look... Anything is on the table, really... 
+- Coalition Formation Simulation: Something to do with my research
+- Maybe somehow Strudel and 3D Model vision? That would be cool.
+- Algorithmic Game theory things, stuff related to my research / honours thesis.
+- Computer vision stuff potentially... 
 
 ## Notes
 
 - Everything runs locally in the browser; nothing is uploaded.
-- Chrome uses a Three.js generated room environment instead of external asset downloads.
+- Preferably Chrome for the Sound Lab, Safari doesn't work with Rete.js very well. 
 - Google Fonts are optional; local fallback fonts work offline.
 - PNG export captures the canvas with a transparent background.
 
