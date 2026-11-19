@@ -29,4 +29,4 @@ npm run build
 - Google Fonts are optional; local fallback fonts work offline.
 - PNG export captures the canvas with a transparent background.
 
-MIT License. Made for the joy of making things.
+MIT License. Made for the joy (or suffering) of making things.
